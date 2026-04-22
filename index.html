@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <fieldset class="sidebar" id="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-book"></i>
+            </div>
+
+            <h2>Mis Tareas</h2>
+
+            <nav>
+                <button><i class="fa-solid fa-list"></i> Todas</button>
+                <button><i class="fa-solid fa-clock"></i> Pendientes</button>
+                <button><i class="fa-solid fa-check"></i> Completadas</button>
+                <button><i class="fa-solid fa-calendar"></i> Calendario</button>
+                <button><i class="fa-solid fa-gear"></i> Ajustes</button>
+            </nav>
+
+        </fieldset>
+
+        <main class="content">
+
+            <div class="top">
+
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Tareas y pedidos de mi papeleria</h1>
+                    <p>Organiza tu inventario</p>
+                </div>
+
+                <div class="user">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <h3>Agregar tu nueva tarea o producto</h3>
+
+                <form id="form" class="form">
+                    <input type="text" id="nombre" placeholder="¿Qué necesitas recordar?" required>
+
+                    <select id="categoria">
+                        <option>Utiles</option>
+                        <option>Oficina</option>
+                        <option>Arte</option>
+                    </select>
+
+                    <input type="date" id="fecha" required>
+
+                    <button>+ Agregar</button>
+                </form>
+            </div>
+
+            <div class="card">
+
+                <div class="header-card">
+                    <h3>Filtrar productos</h3>
+
+                    <div class="stats">
+                        <div>
+                            <span>Total</span>
+                            <b id="t">0</b>
+                        </div>
+
+                        <div>
+                            <span>Pendientes</span>
+                            <b id="p">0</b>
+                        </div>
+
+                        <div>
+                            <span>Completadas</span>
+                            <b id="d">0</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <button class="filter active" data-f="all">Todas</button>
+                    <button class="filter" data-f="pending">Pendientes</button>
+                    <button class="filter" data-f="done">Completadas</button>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <h3>Lista de productos</h3>
+                <div id="list"></div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/java.js"></script>
+
+</body>
+
+</html>
